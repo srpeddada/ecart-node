@@ -1,3 +1,4 @@
+//import { createRequire } from 'module';
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const cors = require("cors");
@@ -8,7 +9,7 @@ const flash = require("connect-flash");
 const session = require("express-session");
 //require("env").config();
 app.use(bodyParser.json());
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 443;
 //const MongoClient = require("mongodb").MongoClient;
 //const uri =
 //"mongodb+srv://srpeddada:MU4kLzKrcxjSfeSp@login-gsmjq.mongodb.net/test?retryWrites=true&w=majority";

@@ -1,3 +1,4 @@
+//import { createRequire } from 'module';
 const express = require("express");
 const router = express.Router();
 router.get("/", (req, res) => res.render("welcome"));

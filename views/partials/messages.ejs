@@ -1,0 +1,29 @@
+<% if(success_msg != ''){ %>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= success_msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-lable="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %> <% if(delete_msg != ''){ %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= delete_msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-lable="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %> <% if(update_msg != ''){ %>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= update_msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-lable="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %> <% if(wrong_msg != ''){ %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= wrong_msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-lable="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %>

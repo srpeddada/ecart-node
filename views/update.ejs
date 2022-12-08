@@ -1,0 +1,57 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-user-edit"></i> Update</h1>
+      <form action="/users/update" method="POST">
+        <div class="form-group">
+        <div class="dropdown" name="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenu2"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Select the parameter you want to update...!!
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button" id=name value=name onclick="myFunction1()">Name</button>
+            <button class="dropdown-item" type="button" id=email value=email onclick="myFunction2()">Email</button>
+            <button class="dropdown-item" type="button" id=date value=date onclick="myFunction3()">Date</button>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <input
+            type="parameter"
+            id="parameter"
+            name="parameter"
+            class="form-control"
+            placeholder="Parameter Name"
+          />
+        </div>
+        <div class="form-group">
+          <input id="parameter_replace" name="parameter_replace" class="form-control" placeholder="Enter value to replace " />
+        </div>
+        <div class="form-group">
+          <input type="hidden" id="hidden" name="hidden" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Update</button>
+      </form>
+      <p class="lead mt-4">Change your mind? <a href="/">Mainpage</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  function myFunction1() {
+    document.getElementById("hidden").value = "name";
+  }
+  function myFunction2() {
+      document.getElementById("hidden").value = "email";
+    }
+    function myFunction3() {
+        document.getElementById("hidden").value = "date";
+      }
+</script>
+

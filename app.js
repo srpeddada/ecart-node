@@ -1,16 +1,19 @@
-//import { createRequire } from 'module';
-const express = require("express");
-const expressLayouts = require("express-ejs-layouts");
-const cors = require("cors");
-const mongoose = require("mongoose");
+//import { createfrom } from 'module';
+import express  from "express";
+import expressLayouts  from "express-ejs-layouts";
+import cors  from "cors";
+import mongoose  from "mongoose";
 const app = express();
-const bodyParser = require("body-parser");
-const flash = require("connect-flash");
-const session = require("express-session");
-//require("env").config();
+import bodyParser  from "body-parser";
+import flash  from "connect-flash";
+import session from "express-session";
+//import root from ""
+import path from './routes/index.js';
+import path2 from './routes/users.js';
+//from "env").config();
 app.use(bodyParser.json());
 var port = process.env.PORT || 443;
-//const MongoClient = require("mongodb").MongoClient;
+//const MongoClient = from "mongodb").MongoClient;
 //const uri =
 //"mongodb+srv://srpeddada:MU4kLzKrcxjSfeSp@login-gsmjq.mongodb.net/test?retryWrites=true&w=majority";
 //const client = new MongoClient(uri, {
@@ -24,7 +27,7 @@ var port = process.env.PORT || 443;
 //});
 
 //DB config
-//const db = require("./config/keys.js").MongoURI;
+//const db = from "./config/keys.js").MongoURI;
 //console.log(db);
 app.use(cors());
 mongoose.set("useNewUrlParser", true);
@@ -59,9 +62,10 @@ app.use((req, res, next) => {
   next();
 });
 //routes are below
-app.use("/", require("./routes/index.js"));
-app.use("/users", require("./routes/users.js"));
+app.use("/", path);
+app.use("/users", path2);
 const server = app.listen(port, () =>
   console.log("server started on port 5000")
 );
-module.exports.server = server;
+
+export default server;

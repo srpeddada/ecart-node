@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "type": "commonjs",
+  "type": "module",
   "engines": {
     "node": "18.x"
   },
@@ -30,6 +30,7 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.11",
     "nodemon": "^2.0.2"
   }
 }

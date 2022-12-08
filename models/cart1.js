@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose  from "mongoose";
 const UserSchema1 = new mongoose.Schema({
   id: {
     type: Number,
@@ -10,4 +10,5 @@ const UserSchema1 = new mongoose.Schema({
   },
 });
 const cart1 = mongoose.model("cart1s", UserSchema1);
-module.exports = cart1;
+
+export default cart1;

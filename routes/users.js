@@ -1,22 +1,22 @@
-//import { createRequire } from 'module';
-const express = require("express");
-const socket = require("socket.io");
+//import { createfrom } from 'module';
+import express from  "express";
+import socket from "socket.io";
 const router = express.Router();
-const User = require("../models/User");
-const cart1 = require("../models/cart1");
-const cart2 = require("../models/cart2");
-const product = require("../models/products");
-const exp = require("../app");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+import User from "../models/User.js";
+import cart1  from "../models/cart1.js";
+import cart2  from "../models/cart2.js";
+import product  from "../models/products.js" ;
+import exp from "../app.js";
+import cors  from "cors";
+import bodyParser  from "body-parser" ;
 var Flag = false;
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
 
-//const User2 = require("../models/Angular");
-router.get("/register", (req, res) => res.render("register"));
+//const User2 = from("../models/Angular");
+router.get("/register", (req, res) => res.write("register"));
 router.get("/delete", (req, res) => res.render("delete"));
 router.get("/update", (req, res) => res.render("update"));
 //router.get("/dahboard", (req, res) => res.render("dashboard"));
@@ -335,4 +335,5 @@ router.get("/logout/:cart", (req, res) => {
 //     );
 //   }
 // });
-module.exports = router;
+
+export default router;
